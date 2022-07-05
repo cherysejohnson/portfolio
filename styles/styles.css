@@ -407,7 +407,7 @@ button {
     transform: translateY(-.6rem);
 }
 
-.tech-stack-item:hover::after{
+.tech-stack-item:hover::after {
     opacity: 1;
     transform: translateY(calc(-100% + -.5rem));
 }
