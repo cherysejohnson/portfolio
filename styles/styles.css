@@ -461,8 +461,37 @@ button {
     font-size: clamp(2rem, 5vw, 4rem);
 }
 
+.over {
+    position: relative;
+}
+
+
+.btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  color: rgb(56, 56, 56);
+  font-size: 16px;
+  padding: 18px 60px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+  font-family: var(--title-font-family);
+  font-weight: bold;
+  font-size: 1.75rem;
+  opacity: 0;
+  box-shadow: 14px 15px 31px -1px rgba(0,0,0,0.67);
+  -webkit-box-shadow: 14px 15px 31px -1px rgba(0,0,0,0.67);
+  -moz-box-shadow: 14px 15px 31px -1px rgba(0,0,0,0.67);;
+  z-index: 999;
+}
+
 .portfolio-cards {
-    gap: 2.5rem;
+    gap: 2.5rem; 
 }
 
 .card-image {
@@ -483,9 +512,10 @@ button {
     padding: 2rem;
 }
 
-.portfolio-card:hover .card-image,
-.portfolio-card:focus .card-image {
-    background-color: #ff7575;
+.portfolio-card:hover .card-image .btn,
+.portfolio-card:focus .card-image .btn {
+    transition: opacity .1s ease-in;
+    opacity: 1;
 }
 
 .card-heading {
@@ -673,22 +703,22 @@ button {
 
     .portfolio-card-2 {
         grid-column: 5/-1;
-        grid-row: 2/span 10;
+        grid-row: 1/span 10;
     }
 
     .portfolio-card-3 {
-        grid-column: 1/4;
+        grid-column: 1/5;
         grid-row: 11/span 10;
     }
 
     .portfolio-card-4 {
         grid-column: 5/-1;
-        grid-row: 12/span 10;
+        grid-row: 11/span 10;
     }
 
     .portfolio-card-5 {
-        grid-column: 4/-1;
-        grid-row: 21/span 10;
+        grid-column: 4/-4;
+        grid-row: 21/span 4;
     }
 
     .get-in-touch .section-description {
