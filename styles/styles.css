@@ -17,7 +17,7 @@
     --link-hover-color: rgba(255,255,255,.2);
     --title-font-family: 'Playfair Display', 'serif';
     --body-font-family: 'Poppins', 'sans-serif';
-    --container-width: 96rem;
+    --container-width: 54rem;
     --container-padding: 1.5rem;
     --section-vertical-spacing: 6rem;
 }
@@ -65,8 +65,6 @@ i {
     font-size: 2.4rem;
 }
 
-input,
-textarea,
 button {
     font: inherit;
     color: inherit;
@@ -200,7 +198,9 @@ button {
 }
 
 .list-link:hover,
-.list-link:focus {
+.list-link:focus,
+.scroll-top:hover,
+.scroll-top:focus {
     opacity: .7;
 }
 
@@ -558,12 +558,15 @@ button {
 
 /* !CONTACT */
 
+.get-in-touch {
+    overflow: hidden;
+}
 
 .form-button {
     display: block;
     padding: 1rem 2rem;
     text-transform: uppercase;
-    margin: 0 auto;
+    margin: 0;
     border-radius: .3rem;
     margin-top: 3rem;
 }
@@ -574,15 +577,142 @@ button {
 
 .get-in-touch .scroll-reveal-right > .description-image.has-sparkles::before {
     top: -5rem;
+    right: 5rem;
 }
 
 .get-in-touch .scroll-reveal-right > .description-image.has-sparkles::after {
     top: 5rem;
-    left: 0rem;
+    right: 7rem;
 }
 
 /* !FOOTER */
 
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    border-top: 1px solid var(--border-top-color);
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+}
+
+.footer .list-link {
+    color: var(--dark-color);
+}
+
+.scroll-top {
+    display: flex;
+    align-items: center;
+    color: var(--dark-color);
+}
+
 /* !SCROLLBAR */
 
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--dark-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b3bbce;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #808694;
+}
+
 /* !MEDIA QUERIES */
+
+@media screen and (min-width: 768px) {
+    .inline-image {
+        width: 15rem;
+        height: 15rem;
+    }    
+
+    .inline-image.has-sparkles::before {
+        width: 1.5rem;
+        height: 1.5rem;
+        top: -1rem;
+        right: -1rem;
+    }
+
+    .inline-image.has-sparkles::after {
+        width: 1rem;
+        height: 1rem;
+        top: 1.5rem;
+        right: 1rem;
+    }
+
+    .section-description {
+        grid-template-columns: 1.5fr 1fr;
+        align-items: center;
+    }
+
+    .description {
+        font-size: 2.4rem;
+    }
+
+    .description-image {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    .portfolio-cards {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .portfolio-card-1 {
+        grid-column: 1/5;
+        grid-row: 1/span 10;
+    }
+
+    .portfolio-card-2 {
+        grid-column: 5/-1;
+        grid-row: 2/span 10;
+    }
+
+    .portfolio-card-3 {
+        grid-column: 1/4;
+        grid-row: 11/span 10;
+    }
+
+    .portfolio-card-4 {
+        grid-column: 5/-1;
+        grid-row: 12/span 10;
+    }
+
+    .portfolio-card-5 {
+        grid-column: 4/-1;
+        grid-row: 21/span 10;
+    }
+
+    .get-in-touch .section-description {
+        display: flex;
+        height: 20rem;
+        gap: 10rem;
+    }
+
+    .get-in-touch .scroll-reveal-left {
+        width: 50rem;
+        margin-left: 2%;
+    }
+
+    .section-description .scroll-reveal-right {
+        display: block;
+        padding-top: 200px;
+    }
+
+    .portfolio {
+        margin-bottom: -5rem;
+    }
+
+    .container {
+        max-width: 96rem;
+    }
+}
