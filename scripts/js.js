@@ -57,7 +57,3 @@ sr.reveal(`.section-title, .section-subtitle-container`, {
     interval: 250
 });
 sr.reveal('.portfolio-card', {interval: 500});
-sr.reveal('.footer', {
-    origin: 'top', 
-    interval: 250
-});
